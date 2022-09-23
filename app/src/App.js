@@ -1,5 +1,4 @@
-import { connect } from 'react-redux'
-import * as actions from './actions'
+import Cart from './components/Cart'
 import Products from './components/Products'
 
 function App() {
@@ -8,10 +7,11 @@ function App() {
       <header >
       </header>
       <main>
+        <Cart />
         <Products />
       </main>
     </div>
   )
 }
 
-export default connect(null, actions)(App)
+export default App

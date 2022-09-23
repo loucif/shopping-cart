@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react'
-import { connect } from 'react-redux'
-import * as actions from '../actions'
-import ProductList from './ProductList'
 import fetchProducts from './fetchProducts.config'
+import ProductDetails from './ProductDetails'
 
 const Products = (props) => {
 
@@ -16,9 +14,12 @@ const Products = (props) => {
 
     return (
         <div>
-            <ProductList products={products} />
+            <h3>Product List</h3>
+            {products.map((product) => (
+                <ProductDetails product={product} key={product.Id} />)
+            )}
         </div>
     )
 }
 
-export default connect(null, actions)(Products)
+export default Products
