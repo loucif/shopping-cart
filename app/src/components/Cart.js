@@ -1,14 +1,14 @@
 import CartProduct from './CartProduct'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
-import { getTotals } from '../features/cartSlice'
+import { getTotalAndDiscount } from '../features/cartSlice'
 
 const Cart = () => {
     const cart = useSelector(state => state.cart)
     const dispatch = useDispatch()
-    
+
     useEffect(() => {
-        dispatch(getTotals())
+        dispatch(getTotalAndDiscount())
     }, [cart, dispatch])
 
     return (
@@ -24,6 +24,7 @@ const Cart = () => {
                 </div>
             )}
             <h2>Total&nbsp;:&nbsp;{cart.cartTotal}</h2>
+            <h2>Discount&nbsp;:&nbsp;{cart.cartDiscount}</h2>
         </div>
     )
 }

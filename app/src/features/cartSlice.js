@@ -82,14 +82,23 @@ const cartSlice = createSlice({
                 }
             }
         },
-        getTotals: (state, action) => {
-            state.cartTotal = state.cartProducts.reduce(
-                (acc, item) => acc + item.Price * item.productQuantity,
-                0
-            )
+        getTotalAndDiscount: (state, action) => {
+            const { cartTotal, cartDiscount } = state.cartProducts.reduce(
+                (acc, item) => {
+                    const { Id, Price, productQuantity, productDiscount } = item
+                    acc.cartTotal += Price * productQuantity
+                    acc.cartDiscount += Id === "1" ? Price * productDiscount : Id === "3" ? Price * productDiscount * 0.5 : 0
+                    return acc
+                },
+                {
+                    cartTotal: 0,
+                    cartDiscount: 0,
+                })
+            state.cartTotal = cartTotal
+            state.cartDiscount = cartDiscount
         }
     }
 })
 
-export const { addProductToCart, decreaseProductQuantity, getTotals } = cartSlice.actions
+export const { addProductToCart, decreaseProductQuantity, getTotalAndDiscount } = cartSlice.actions
 export default cartSlice.reducer
