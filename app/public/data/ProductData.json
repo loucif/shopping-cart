@@ -2,43 +2,27 @@
     "Products": [
         {
             "Id": "1",
-            "Title": "Banana",
+            "Title": "Milk",
             "Description": "The banana is an edible fruit, botanically a berry",
-            "ImageUrl": "",
+            "ImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Glass_of_Milk_%2833657535532%29.jpg/239px-Glass_of_Milk_%2833657535532%29.jpg",
             "Ranking": 4,
-            "Price": 7
+            "Price": 1.15
         },
         {
             "Id": "2",
-            "Title": "Cinnamon roll",
+            "Title": "Butter",
             "Description": "A cinnamon roll  is a sweet roll served commonly in Northern Europe and North America.",
-            "ImageUrl": "",
+            "ImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/%C5%A0v%C3%A9dsk%C3%BD_kol%C3%A1%C4%8D_naruby_904_%28cropped%29.JPG/320px-%C5%A0v%C3%A9dsk%C3%BD_kol%C3%A1%C4%8D_naruby_904_%28cropped%29.JPG",
             "Ranking": 3,
-            "Price": 5
+            "Price": 0.80
         },
         {
             "Id": "3",
-            "Title": "Apple",
+            "Title": "Bread",
             "Description": "The apple tree is a deciduous tree in the rose family best known for its sweet, pomaceous fruit, the apple.",
-            "ImageUrl": "",
+            "ImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Korb_mit_Brötchen.JPG/320px-Korb_mit_Brötchen.JPG",
             "Ranking": 5,
-            "Price": 6
-        },
-        {
-            "Id": "4",
-            "Title": "Minced meat",
-            "Description": "Ground beef, beef mince, minced meat, hamburger is a ground meat made of beef, finely chopped by a meat grinder.",
-            "ImageUrl": "",
-            "Ranking": 4,
-            "Price": 60
-        },
-        {
-            "Id": "5",
-            "Title": "Milk",
-            "Description": "Milk is a white liquid produced by the mammary glands of mammals. ",
-            "ImageUrl": "",
-            "Ranking": 3,
-            "Price": 10
+            "Price": 1.00
         }
     ]
 }

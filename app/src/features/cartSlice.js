@@ -2,9 +2,9 @@ import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
     cartProducts: [],
-    cartQuantity: 0,
     cartTotal: 0,
     cartDiscount: 0,
+    cartDef: 0,
 }
 
 const cartSlice = createSlice({
@@ -22,6 +22,7 @@ const cartSlice = createSlice({
                 state.cartProducts.push({
                     ...action.payload,
                     productQuantity: 1,
+                    productDiscount: 0,  
                 })
             }
 
@@ -96,6 +97,7 @@ const cartSlice = createSlice({
                 })
             state.cartTotal = cartTotal
             state.cartDiscount = cartDiscount
+            state.cartDef = cartTotal - cartDiscount
         }
     }
 })
