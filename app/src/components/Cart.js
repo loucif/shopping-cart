@@ -1,8 +1,15 @@
 import CartProduct from './CartProduct'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect } from 'react'
+import { getTotals } from '../features/cartSlice'
 
 const Cart = () => {
     const cart = useSelector(state => state.cart)
+    const dispatch = useDispatch()
+    
+    useEffect(() => {
+        dispatch(getTotals())
+    }, [cart, dispatch])
 
     return (
         <div>
@@ -16,6 +23,7 @@ const Cart = () => {
                     ))}
                 </div>
             )}
+            <h2>Total&nbsp;:&nbsp;{cart.cartTotal}</h2>
         </div>
     )
 }
